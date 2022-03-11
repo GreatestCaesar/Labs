@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="editAnchor" prefHeight="194.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edit.editController">
+    <children>
+        <Button fx:id="buttonEdit" layoutX="482.0" layoutY="148.0" mnemonicParsing="false" text="Редактировать" AnchorPane.leftAnchor="482.0" AnchorPane.topAnchor="152.00000000000003" />
+        <ChoiceBox fx:id="choiceModel" layoutX="122.0" layoutY="35.0" prefWidth="150.0" AnchorPane.leftAnchor="122.0" AnchorPane.topAnchor="39.00000000000002" />
+        <Label layoutX="52.0" layoutY="37.0" prefHeight="22.0" prefWidth="69.0" text="Модель" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="37.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="330.0" layoutY="36.0" prefHeight="22.0" prefWidth="69.0" text="Продавец" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="39.99999999999998">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="choiceSeller" layoutX="422.0" layoutY="34.0" prefWidth="150.0" AnchorPane.leftAnchor="422.0" AnchorPane.topAnchor="38.00000000000002" />
+        <Label layoutX="45.0" layoutY="105.0" prefHeight="22.0" prefWidth="69.0" text="Цена" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="105.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="fieldCost" layoutX="123.0" layoutY="104.0" AnchorPane.leftAnchor="123.0" AnchorPane.topAnchor="108.00000000000003" />
+        <DatePicker fx:id="fieldDate" layoutX="376.0" layoutY="103.0" AnchorPane.leftAnchor="376.0" AnchorPane.topAnchor="103.0" />
+        <Label layoutX="330.0" layoutY="105.0" prefHeight="22.0" prefWidth="69.0" text="Дата" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="105.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

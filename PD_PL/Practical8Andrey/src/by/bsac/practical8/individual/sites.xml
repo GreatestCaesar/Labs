@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Site>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="sites.xsd">
+    <site>
+        <title>События Тундры</title> <!-- Название страницы-->
+        <type>Страница новостей</type> <!-- Тип сайта-->
+        <chars>
+            <e-mail>Есть</e-mail> <!-- Наличие эл. почты-->
+            <news>Есть</news> <!-- Наличие новостей -->
+            <free>Да</free> <!-- Доступ к информации (Бесплатно - да/нет) -->
+        </chars>
+        <authorize>Нет</authorize> <!-- Необходима ли авторизация -->
+    </site>
+    <site>
+        <title>Дешёвые рабы</title> <!-- Название страницы-->
+        <type>Рекламный</type> <!-- Тип сайта-->
+        <chars>
+            <e-mail>Нет</e-mail> <!-- Наличие эл. почты-->
+            <news>Нет</news> <!-- Наличие новостей -->
+            <free>Нет</free> <!-- Доступ к информации (Бесплатно - да/нет) -->
+        </chars>
+        <authorize>Нет</authorize> <!-- Необходима ли авторизация -->
+    </site>
+    <site>
+        <title>Умелые ручки</title> <!-- Название страницы-->
+        <type>Портал</type> <!-- Тип сайта-->
+        <chars>
+            <e-mail>Есть</e-mail> <!-- Наличие эл. почты-->
+            <news>Есть</news> <!-- Наличие новостей -->
+            <free>Да</free> <!-- Доступ к информации (Бесплатно - да/нет) -->
+        </chars>
+        <authorize>Да</authorize> <!-- Необходима ли авторизация -->
+    </site>
+</Site>

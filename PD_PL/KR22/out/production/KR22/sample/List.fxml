@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TableView layoutX="35.0" layoutY="82.0" prefHeight="200.0" prefWidth="146.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Список №1" />
+        </columns>
+      </TableView>
+      <TableView layoutX="227.0" layoutY="82.0" prefHeight="200.0" prefWidth="146.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Список №2" />
+        </columns>
+      </TableView>
+      <TableView layoutX="423.0" layoutY="82.0" prefHeight="200.0" prefWidth="146.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Список №3" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

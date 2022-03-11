@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Gem>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="gem.xsd">
+    <gem>
+        <name>Алмаз</name>
+        <preciousness>Драгоценный</preciousness>
+        <origin>Россия</origin>
+        <visual_parameters>
+            <color>Бесцветный</color>
+            <transparence>100</transparence>
+        </visual_parameters>
+        <value>10</value>
+    </gem>
+    <gem>
+        <name>Аметист</name>
+        <preciousness>Полудрагоценный</preciousness>
+        <origin>Россия</origin>
+        <visual_parameters>
+            <color>Фиолетовый</color>
+            <transparence>100</transparence>
+        </visual_parameters>
+        <value>4</value>
+    </gem>
+    <gem>
+        <name>Изумруд</name>
+        <preciousness>Драгоценный</preciousness>
+        <origin>Россия</origin>
+        <visual_parameters>
+            <color>Зеленый</color>
+            <transparence>100</transparence>
+        </visual_parameters>
+        <value>13</value>
+    </gem>
+    <gem>
+        <name>Алмаз</name>
+        <preciousness>Поулдрагоценный</preciousness>
+        <origin>Африка</origin>
+        <visual_parameters>
+            <color>Жёлтый</color>
+            <transparence>50</transparence>
+        </visual_parameters>
+        <value>6</value>
+    </gem>
+</Gem>

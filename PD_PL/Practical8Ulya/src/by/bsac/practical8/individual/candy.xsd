@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Candy" type="CandyType"/>
+  <xs:complexType name="ingredientsType">
+    <xs:sequence>
+      <xs:element name="shugar">
+        <xs:annotation>
+          <xs:documentation>ингредиенты  ингредиенты  ингредиенты</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="fructose">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="2.5"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="vanillin">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="1.5"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="valuesType">
+    <xs:sequence>
+      <xs:element name="proteins">
+        <xs:annotation>
+          <xs:documentation>пищевая ценность  пищевая ценность  пищевая ценность</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="11"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="fats">
+        <xs:annotation>
+          <xs:documentation>белки  белки  белки</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="0.5"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="carbohydrates">
+        <xs:annotation>
+          <xs:documentation>жиры  жиры  жиры</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="0.8"/>
+            <xs:enumeration value="0.5"/>
+            <xs:enumeration value="6.6"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="candyType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Борька"/>
+            <xs:enumeration value="Сливки"/>
+            <xs:enumeration value="СТОЛИЧНЫЕ"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="energy">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="20"/>
+            <xs:enumeration value="50"/>
+            <xs:enumeration value="75"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="type">
+        <xs:annotation>
+          <xs:documentation>ккал  ккал  ккал</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Шоколадная"/>
+            <xs:enumeration value="Леденец"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="ingredientsType" name="ingredients">
+        <xs:annotation>
+          <xs:documentation>тип конфеты  тип конфеты  тип конфеты</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="valuesType" name="values">
+        <xs:annotation>
+          <xs:documentation>углеводы  углеводы  углеводы</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="production">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Украина"/>
+            <xs:enumeration value="Россия"/>
+            <xs:enumeration value="Беларусь"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CandyType">
+    <xs:sequence>
+      <xs:element type="candyType" name="candy" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

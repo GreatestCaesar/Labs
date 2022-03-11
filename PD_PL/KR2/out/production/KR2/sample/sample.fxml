@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="window" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label layoutX="29.0" layoutY="22.0" prefHeight="26.0" prefWidth="61.0" text="Отдел">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="departments" layoutX="77.0" layoutY="22.0" prefHeight="26.0" prefWidth="140.0" />
+      <Label layoutX="299.0" layoutY="27.0" text="Ответственный">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="respon" layoutX="405.0" layoutY="25.0" prefWidth="150.0" />
+      <Label layoutX="29.0" layoutY="61.0" text="Тип документа">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="type" layoutX="134.0" layoutY="59.0" prefWidth="150.0" />
+      <Label layoutX="320.0" layoutY="63.0" text="Дата">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="date" layoutX="356.0" layoutY="61.0" />
+      <TableView fx:id="table" layoutX="15.0" layoutY="175.0" prefHeight="228.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="43.0" text="ID" />
+          <TableColumn fx:id="name" prefWidth="98.0" text="Название" />
+          <TableColumn fx:id="depar" prefWidth="84.0" text="Отдел" />
+          <TableColumn fx:id="ty" prefWidth="102.0" text="Тип" />
+          <TableColumn fx:id="dat" prefWidth="106.0" text="Дата" />
+          <TableColumn fx:id="resp" prefWidth="136.0" text="Ответственный" />
+        </columns>
+      </TableView>
+      <Label layoutX="29.0" layoutY="97.0" text="Название">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name1" layoutX="100.0" layoutY="95.0" />
+      <Button fx:id="add" layoutX="480.0" layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Добавить" />
+      <Button fx:id="delete" layoutX="15.0" layoutY="415.0" mnemonicParsing="false" text="Удалить" />
+      <Button fx:id="edit" layoutX="488.0" layoutY="415.0" mnemonicParsing="false" text="Редактировать" />
+      <ChoiceBox fx:id="findCh" layoutX="29.0" layoutY="137.0" prefWidth="150.0" />
+      <Button fx:id="findBut" layoutX="342.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Поиск" />
+      <TextField fx:id="findText" layoutX="186.0" layoutY="137.0" />
+      <Button fx:id="toFile" layoutX="85.0" layoutY="415.0" mnemonicParsing="false" text="Записать в файл" />
+      <Button fx:id="about" layoutX="390.0" layoutY="415.0" mnemonicParsing="false" text="О программе" />
+   </children>
+</AnchorPane>

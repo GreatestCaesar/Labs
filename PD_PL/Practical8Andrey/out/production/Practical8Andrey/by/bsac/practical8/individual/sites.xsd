@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Site" type="SiteType"/>
+  <xs:complexType name="charsType">
+    <xs:sequence>
+      <xs:element name="e-mail">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Есть"/>
+            <xs:enumeration value="Нет"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="news">
+        <xs:annotation>
+          <xs:documentation>Наличие эл. почты Наличие эл. почты Наличие эл. почты</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Есть"/>
+            <xs:enumeration value="Нет"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="free">
+        <xs:annotation>
+          <xs:documentation>Наличие новостей  Наличие новостей  Наличие новостей</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Да"/>
+            <xs:enumeration value="Нет"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="siteType">
+    <xs:sequence>
+      <xs:element name="title">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="События Тундры"/>
+            <xs:enumeration value="Дешёвые рабы"/>
+            <xs:enumeration value="Умелые ручки"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="type">
+        <xs:annotation>
+          <xs:documentation>Название страницы Название страницы Название страницы</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Страница новостей"/>
+            <xs:enumeration value="Рекламный"/>
+            <xs:enumeration value="Портал"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="charsType" name="chars">
+        <xs:annotation>
+          <xs:documentation>Тип сайта Доступ к информации (Бесплатно - да/нет)  Тип сайта Доступ к информации (Бесплатно - да/нет)  Тип сайта Доступ к информации (Бесплатно - да/нет)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="authorize">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Нет"/>
+            <xs:enumeration value="Да"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SiteType">
+    <xs:sequence>
+      <xs:element type="siteType" name="site" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Необходима ли авторизация  Необходима ли авторизация  Необходима ли авторизация</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

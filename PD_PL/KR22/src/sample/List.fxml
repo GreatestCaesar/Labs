@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TableView layoutX="35.0" layoutY="82.0" prefHeight="200.0" prefWidth="146.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Список №1" />
+        </columns>
+      </TableView>
+      <TableView layoutX="227.0" layoutY="82.0" prefHeight="200.0" prefWidth="146.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Список №2" />
+        </columns>
+      </TableView>
+      <TableView layoutX="423.0" layoutY="82.0" prefHeight="200.0" prefWidth="146.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Список №3" />
+        </columns>
+      </TableView>
+      <CheckBox layoutX="310.0" layoutY="306.0" mnemonicParsing="false" text="Вправо">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <CheckBox layoutX="212.0" layoutY="306.0" mnemonicParsing="false" text="Влево">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+      <Button layoutX="56.0" layoutY="344.0" mnemonicParsing="false" text="Добавить" />
+      <Button layoutX="178.0" layoutY="344.0" mnemonicParsing="false" text="Редактировать" />
+      <Button layoutX="331.0" layoutY="344.0" mnemonicParsing="false" text="Удалить" />
+      <Button layoutX="452.0" layoutY="344.0" mnemonicParsing="false" text="Переместить" />
+   </children>
+</AnchorPane>

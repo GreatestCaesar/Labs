@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Medicine" type="MedicineType"/>
+  <xs:complexType name="drugType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="pharm">
+        <xs:annotation>
+          <xs:documentation>наименование препарата</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="group">
+        <xs:annotation>
+          <xs:documentation>фирма-производитель</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="analogs">
+        <xs:annotation>
+          <xs:documentation>группа препаратов</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="versions">
+        <xs:annotation>
+          <xs:documentation>аналоги</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="certificate">
+        <xs:annotation>
+          <xs:documentation>варианты исполнения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="package">
+        <xs:annotation>
+          <xs:documentation>свидетельство о регистрации препарата</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="dosage">
+        <xs:annotation>
+          <xs:documentation>упаковка</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MedicineType">
+    <xs:sequence>
+      <xs:element type="drugType" name="drug">
+        <xs:annotation>
+          <xs:documentation>дозировка препарата, периодичность приема</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

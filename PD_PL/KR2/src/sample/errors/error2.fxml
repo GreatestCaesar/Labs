@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="120.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.errors.Error2">
+    <children>
+        <Label layoutX="25.0" layoutY="25.0" text="Выберите данные для поиска!">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="ok" layoutX="175.0" layoutY="81.0" mnemonicParsing="false" text="ОК" />
+    </children>
+</AnchorPane>

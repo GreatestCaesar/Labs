@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.edit.Edit">
+   <children>
+      <TextField fx:id="name1" layoutX="82.0" layoutY="12.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Название">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="276.0" layoutY="16.0" text="Отдел">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="departments1" layoutX="325.0" layoutY="13.0" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="49.0" text="Ответственный">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="respon1" layoutX="119.0" layoutY="47.0" prefWidth="150.0" />
+      <Label layoutX="295.0" layoutY="49.0" text="Тип">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="type1" layoutX="325.0" layoutY="47.0" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="85.0" text="Дата">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="date" layoutX="57.0" layoutY="83.0" />
+      <Button fx:id="edit" layoutX="360.0" layoutY="81.0" mnemonicParsing="false" text="Редактировать">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="update" layoutX="247.0" layoutY="81.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="98.0" text="Обновить">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

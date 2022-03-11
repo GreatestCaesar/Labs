@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="FlatWare.xsl"?>
+
+<FlatWare>
+    <flatware>
+        <type>Нож</type>   <!-- тип (нож, вилка, ложка и т. д.) -->
+        <origin>Беларусь</origin> <!-- страна производства -->
+        <visual>          <!-- визуальные характеристики -->
+            <type>Лезвие</type> <!-- лезвие, зубец -->
+            <length>13</length> <!-- длина -->
+            <width>3</width> <!-- ширина -->
+            <material>Медь</material> <!-- материал -->
+        </visual>
+        <value>Да</value> <!-- коллекционный либо нет -->
+    </flatware>
+    <flatware>
+        <type>Вилка</type>   <!-- тип (нож, вилка, ложка и т. д.) -->
+        <origin>Сингапур</origin> <!-- страна производства -->
+        <visual>          <!-- визуальные характеристики -->
+            <type>Зубец</type> <!-- лезвие, зубец -->
+            <length>3</length> <!-- длина -->
+            <width>2</width> <!-- ширина -->
+            <material>Чугун</material> <!-- материал -->
+        </visual>
+        <value>Нет</value> <!-- коллекционный либо нет -->
+    </flatware>
+    <flatware>
+        <type>Ложка</type>   <!-- тип (нож, вилка, ложка и т. д.) -->
+        <origin>США</origin> <!-- страна производства -->
+        <visual>          <!-- визуальные характеристики -->
+            <type></type> <!-- лезвие, зубец -->
+            <length>4</length> <!-- длина -->
+            <width>3</width> <!-- ширина -->
+            <material>Сталь</material> <!-- материал -->
+        </visual>
+        <value>Нет</value> <!-- коллекционный либо нет -->
+    </flatware>
+</FlatWare>

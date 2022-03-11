@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<bsac>
+    <students>
+        <student>
+            <firstname>Василий</firstname>
+            <lastname>Иванов</lastname>
+            <class>СП441</class>
+        </student>
+        <student>
+            <firstname>Василий</firstname>
+            <lastname>Иванов</lastname>
+            <class>СП442</class>
+        </student>
+    </students>
+    <teachers>
+        <teacher>
+            <firstname>Иван</firstname>
+            <lastname>Петров</lastname>
+            <salary>10000000</salary>
+        </teacher>
+    </teachers>
+</bsac>

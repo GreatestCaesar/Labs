@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FlatWare" type="FlatWareType"/>
+  <xs:complexType name="visualType">
+    <xs:sequence>
+      <xs:element name="type">
+        <xs:annotation>
+          <xs:documentation>визуальные характеристики  визуальные характеристики  визуальные характеристики</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Лезвие"/>
+            <xs:enumeration value="Зубец"/>
+            <xs:enumeration value=""/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="length">
+        <xs:annotation>
+          <xs:documentation>лезвие, зубец  лезвие, зубец  лезвие, зубец</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="width">
+        <xs:annotation>
+          <xs:documentation>длина  длина  длина</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="material">
+        <xs:annotation>
+          <xs:documentation>ширина  ширина  ширина</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Медь"/>
+            <xs:enumeration value="Чугун"/>
+            <xs:enumeration value="Сталь"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flatwareType">
+    <xs:sequence>
+      <xs:element name="type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Нож"/>
+            <xs:enumeration value="Вилка"/>
+            <xs:enumeration value="Ложка"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="origin">
+        <xs:annotation>
+          <xs:documentation>тип (нож, вилка, ложка и т. д.)  тип (нож, вилка, ложка и т. д.)  тип (нож, вилка, ложка и т. д.)</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Беларусь"/>
+            <xs:enumeration value="Сингапур"/>
+            <xs:enumeration value="США"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="visualType" name="visual">
+        <xs:annotation>
+          <xs:documentation>страна производства  материал  страна производства  материал  страна производства  материал</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="value">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Да"/>
+            <xs:enumeration value="Нет"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FlatWareType">
+    <xs:sequence>
+      <xs:element type="flatwareType" name="flatware" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>коллекционный либо нет  коллекционный либо нет  коллекционный либо нет</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

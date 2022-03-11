@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="candy.xsl"?>
+<Candy>
+    <candy>
+        <name>Борька</name>
+        <energy>20</energy> <!-- ккал -->
+        <type>Шоколадная</type>     <!-- тип конфеты -->
+        <ingredients>   <!-- ингредиенты -->
+            <shugar>10</shugar>
+            <fructose>5</fructose>
+            <vanillin>10</vanillin>
+        </ingredients>
+        <values>    <!-- пищевая ценность -->
+            <proteins>5</proteins> <!-- белки -->
+            <fats>0.5</fats><!-- жиры -->
+            <carbohydrates>0.8</carbohydrates><!-- углеводы -->
+        </values>
+        <production>Украина</production>
+    </candy>
+    <candy>
+        <name>Сливки</name>
+        <energy>50</energy> <!-- ккал -->
+        <type>Леденец</type>     <!-- тип конфеты -->
+        <ingredients>   <!-- ингредиенты -->
+            <shugar>11</shugar>
+            <fructose>8</fructose>
+            <vanillin>1</vanillin>
+        </ingredients>
+        <values>    <!-- пищевая ценность -->
+            <proteins>10</proteins> <!-- белки -->
+            <fats>2</fats><!-- жиры -->
+            <carbohydrates>0.5</carbohydrates><!-- углеводы -->
+        </values>
+        <production>Россия</production>
+    </candy>
+    <candy>
+        <name>СТОЛИЧНЫЕ</name>
+        <energy>75</energy> <!-- ккал -->
+        <type>Шоколадная</type>     <!-- тип конфеты -->
+        <ingredients>   <!-- ингредиенты -->
+            <shugar>12</shugar>
+            <fructose>2.5</fructose>
+            <vanillin>1.5</vanillin>
+        </ingredients>
+        <values>    <!-- пищевая ценность -->
+            <proteins>11</proteins> <!-- белки -->
+            <fats>3</fats><!-- жиры -->
+            <carbohydrates>6.6</carbohydrates><!-- углеводы -->
+        </values>
+        <production>Беларусь</production>
+    </candy>
+</Candy>

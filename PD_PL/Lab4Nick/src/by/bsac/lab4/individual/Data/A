@@ -1,0 +1,312 @@
+const db = {
+    "total": 10,
+    "0": [
+        {
+          "method": "Средства ввода информации (клавиатура, порты ввода-вывода, CD-привод и т.д.)",
+          "danger" : [
+             {"title": "Внедрение классических программных (компьютерных) вирусов, реализующих запись кода вредоносного ПО в код других программ с целью получения управления при запуске зараженных файлов, создание файлов двойников для легального ПО, копирование кода вредоносной программы в каталоги для последующего запуска пользователем"},
+             { "title": "Использование подключений к различным сетям (Web, почта, локальная сеть и т.п.)"}
+          ]
+        }
+    ],
+    "1": [
+        {
+            "method": "Средства вывода информации (принтер, CD-привод, плоттер, порты ввода-вывода и .т.д.)",
+            "danger" : [
+                {"title": "Физическое копирование носителей"},
+                {"title": "Утеря или кража оборудования АС (в том числе  носителей информации)"},
+                {"title": "Доступ к информации, выходящей за пределы контролируемой зоны вследствие списания (утилизации) носителей информации, содержащих"}
+            ]
+        }
+    ],
+    "2": [
+        {
+            "method": "Средства отображения информации (монитор, проектор)",
+            "danger" : [
+                {"title": "Просмотр информации на дисплее сотрудниками, не допущенными к обработке"},
+                {"title": "Просмотр информации на дисплее посторонними лицами, находящимися за пределами помещения, в котором ведется обработка"},
+                {"title": "Просмотр информации с печатных документов сотрудниками, не допущенными к обработке"}
+            ]
+        }
+    ],
+    "3": [
+        {
+            "method": "Средства обработки информации (ПЗУ, ОЗУ, ЦП, материнская плата и т.д.)",
+            "danger" : [
+                {"title": "Частичное исчерпание ресурсов. Привлечение части ресурсов на обработку пакетов, передаваемых злоумышленником со снижением пропускной способности каналов связи, производительности сетевых устройств, нарушением требований к времени обработки запросов"},
+                {"title": "Полное исчерпание ресурсов. Исчерпание ресурсов АС при обработке пакетов, передаваемых злоумышленником (занятие всей полосы пропускания каналов связи, переполнение очередей запросов на обслуживание)"}
+            ]
+        }
+    ],
+    "4": [
+        {
+            "method": "Средства коммутации и передачи информации ( модем, концентратор, кабель и т.д.)",
+            "danger" : [
+                {"title": "Перехват техническими средствами оптического излучения с боковой поверхности оптического волокна в волоконнооптической системе передачи данных"},
+                {"title": "Перехват техническими средствами побочных электромагнитных излучений информативных сигналов от технических средств и линий передачи информации"}
+            ]
+        }
+    ],
+    "5": [
+        {
+            "method": "Система электропитания",
+            "danger" : [
+                {"title": "Перехват техническими средствами наводок информативного сигнала, обрабатываемого техническими средствами на цепи электропитания"}
+            ]
+        }
+    ],
+    "6": [
+        {
+            "method": "Базовая система ввода-вывода (BIOS)",
+            "danger" : [
+                {"title": "Отсутствие аутентификации пользователей компьютеров до загрузки ОС (паролей BIOS, дополнительных аппаратных средств аутентификации)"},
+                {"title": "Разглашение паролей BIOS или дополнительных аппаратных средств аутентификации, например, записывание в доступном для нарушителя месте (на бумаге, клавиатуре и т.п.)"},
+                {"title": "Вскрытие компьютера и аппаратный сброс пароля BIOS"},
+                {"title": "Подбор пароля BIOS (или дополнительных аппаратных средств аутентификации)"}
+            ]
+        }
+    ],
+    "7": [
+        {
+            "method": "Операционная система",
+            "danger" : [
+                {"title": "Предоставление пользователям прав доступа (в том числе по видам доступа) и другим ресурсам АС сверх необходимого для работы"},
+                {"title": "Преднамеренное или случайное уничтожение доступной информации (записей, файлов, форматирование диска)"},
+                {"title": "Несанкционированное изменение конфигурационных файлов ПО (настроек экрана, сети, прикладных программ...)"}
+            ]
+        }
+    ],
+    "8": [
+        {
+            "method": "Нештатное дополнительно ПО (ОС, утилиты, драйверы)",
+            "danger" : [
+                {"title": "Активизация распространяемых злоумышленниками файлов при случайном обращении к ним пользователя"},
+                {"title": "Использование возможностей удаленного управления системой. Использование скрытых компонентов ('троянских' программ) либо штатных средств управления и администрирования компьютерных сетей"},
+                {"title": "Выявление сетевых служб, используемых портов, версий программ (уязвимых)"}
+            ]
+        }
+    ],
+    "9": [
+        {
+            "method": "Недокументированная точка входа в операционную систему",
+            "danger" : [
+                {"title": "Использование программ анализаторов пакетов (снифферов) для перехвата идентификаторов и паролей удалённого доступа (к сетевым службам)"}
+            ]
+        }
+    ]
+}
+
+let app = document.querySelector('#app');
+let app2 = document.querySelector('#app2');
+let app3 = document.querySelector('#app3');
+let button = document.querySelector('.submitMethod');
+let button2 = document.querySelector('.submitMethod2');
+let arrayQustions = new Map();
+let arrayDangers = new Map();
+let selectedAll = null;
+
+let countDangers = 0;
+
+let Q1 = 0;
+let Q2 = 0;
+
+app.style.display = 'flex';
+app2.style.display = 'none';
+app3.style.display = 'none';
+
+for(let i = 0; i <= db.total - 1; i++) {
+    addCheckBox(db[i][0], i);
+}
+
+function addCheckBox(data, i) {
+    let CheckBox = `
+        <div class="box">
+            <input type="checkbox" value="${ i }" id="${ i }" class="boxCheck">
+            <input type="number" value="0" id="${ i }" class="i40 none" max="1" min="0" step="0.1">
+            <label for="${ i }">${ data.method }</label>
+        </div>
+    `;
+
+    this.app.innerHTML += CheckBox;
+}
+
+button.addEventListener('click', analisMethod, false);
+button2.addEventListener('click', analisMethod2, false);
+
+function analisMethod() {
+    let countCheck = 0;
+    let box = document.querySelectorAll('.box');
+    box.forEach(el => {
+        let tmp = el.querySelector('input[type=checkbox]');
+        
+        if(tmp.checked) {
+            let input = el.querySelector('input[type=number]');
+            arrayQustions.set(input.id, input.value);
+            countCheck++;
+        }
+    });
+
+    if(countCheck > 0) {
+        app.style.display = 'none';
+        app.innerHTML = 'none';
+        button.style.display = 'none';
+
+        app2.style.display = 'flex';
+
+        app2.innerHTML += `
+            <div class="selAll">
+                <input type="checkbox" id="selectAll">
+                <label for="selectAll">Выбрать всё</label>
+            </div>
+        `;
+        let x = 0;
+
+        for(let i = 0; i <= db.total - 1; i++) {
+            if(arrayQustions.get("" + i)) {
+                db[i][0].danger.forEach(element => {
+                    let CheckBox = `
+                        <div class="dangers">
+                            <input type="checkbox" value="${ x }" id="${ x }" >
+                            <label for="${ x }">${ element.title }</label>
+                            
+                            <input type="number" value="0" id="${ x }" class="x${x} i40" max="1" min="0" step="0.1">
+                            <input type="number" value="0" id="${ x }" class="y${x} i40" max="1" min="0" step="0.1">
+                            <input type="number" value="0" id="${ x }" class="z${x} i40" max="1" min="0" step="0.1">
+                        </div>
+                    `;
+
+                    app2.innerHTML += CheckBox;
+                    x++;
+                    countDangers++;
+                    console.log(countDangers)
+                });
+
+            }
+        }
+
+    app2.style.display = 'flex';
+
+        button2.style.display = 'block';
+    } else {
+        let div = "<div class='poof'>Вы должны осуществить выбор хотя бы 1 системы!</div>";
+        app.innerHTML += div;
+
+        setTimeout(function () {
+            document.querySelector('.poof').remove();
+        }, 3000)
+    }
+
+    selectedAll = document.querySelector('#selectAll');
+    selectedAll.addEventListener('click', selectAllCheckBox, 'false');
+}
+
+function analisMethod2() {
+    let checkDangers = 0;
+
+    let box = document.querySelectorAll('.dangers');
+    box.forEach(el => {
+        let tmp = el.querySelector('input[type=checkbox]');
+        
+        if(tmp.checked) {
+            let input = el.querySelectorAll('input[type=number]');
+            input.forEach(data => {
+                arrayDangers.set(data.id + data.className[0] + data.className[1], data.value)
+            });
+
+            checkDangers++;
+        }
+    });
+
+    if(checkDangers > 0) {
+        let xyz = ['x', 'y', 'z'];
+        let count = 0;
+        let count1 = 0;
+        
+        for(let i = 0; i <= db.total - 1; i++) {
+            Q1 = 0;
+            Q2 = 0;
+            console.log("--STRR--");
+
+            for(let j = 0; j <= xyz.length - 1; j++) {
+                let str = i + xyz[j] + i;
+                let value = parseFloat(arrayDangers.get(str));
+
+                if(value > 1) value = 1;
+
+                if(value >= 0) {
+                    if(j == 0) {
+                        Q1 = value;
+                    } else {
+                        Q1 *= value;
+                    }
+    
+                    if(xyz[j] != 'z') {
+                        if(j == 0) 
+                            Q2 = value;
+                        else
+                            Q2 *= value;
+                    }
+                }
+            }
+            console.log(Q1);
+            console.log("----");
+            count += Q1;
+            count1 += Q2;
+        }
+        console.log("-COUT-");
+        console.log(count)
+
+        // TOTAL
+        let counter = countDangers;
+        Q1 = count / counter * 100;
+        Q2 = count1 / counter * 100;
+
+        showTotal();
+    } else {
+        let div = "<div class='poof'>Вы должны осуществить выбор хотя бы 1 угрозы!</div>";
+        app2.innerHTML += div;
+
+        setTimeout(function () {
+            document.querySelector('.poof').remove();
+        }, 3000)
+    }
+}
+
+
+function showTotal() {
+    app.style.display = "none";
+    app2.style.display = "none";
+    button2.style.display = "none";
+
+    app3.style.display = 'flex';
+
+    let divQ1 = document.querySelector('.q1');
+    let divQ2 = document.querySelector('.q2');
+
+    let req = setShow(Math.round(Q1));
+    let req1 = setShow(Math.round(Q2));
+    
+    divQ1.innerHTML = req;
+    divQ2.innerHTML = req1;
+}
+
+function setShow(per) {
+    if(per >= 60) 
+        return `<div class="BAD total-per">Высокий<br/>${per}%</div>`;
+    else if(per < 60 && per >= 35) 
+        return `<div class="NORM total-per">Средний<br/>${per}%</div>`;
+    else 
+        return `<div class="GOOD total-per">Минимальный<br/>${per}%</div>`;
+}
+
+let c = false;
+function selectAllCheckBox() {
+    let all = document.querySelectorAll('input[type=checkbox]');
+    all.forEach(el => {
+        if(!c) 
+            el.checked = true;
+        else
+            el.checked = false;
+    });
+    c = !c;
+}
